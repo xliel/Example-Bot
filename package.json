@@ -1,0 +1,16 @@
+  
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "my first bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.0.2",
+    "fs": "^0.0.2"
+  },
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Xliel",
+  "license": "ISC"
+}

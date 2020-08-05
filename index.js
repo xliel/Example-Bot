@@ -2,7 +2,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js");
 const { readdirSync } = require("fs");
 const config = require("./config");
 const client = new Client({
-  disableEveryone: false,
+  disableMentions: "everyone",
   fetchAllMembers: true
 });
 

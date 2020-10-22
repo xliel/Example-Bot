@@ -2,7 +2,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js");
 const { readdirSync } = require("fs");
 const config = require("./config");
 const client = new Client({
-  disableMentions: "everyone",
+  disableMentions: 'everyone',
   fetchAllMembers: true
 });
 
@@ -12,7 +12,7 @@ const { prefix, token } = config;
 
 // Activity Function
 function Activity() {
-  return client.user.setActivity(`${prefix}help | Made by Derpy`, { type: "PLAYING" });
+  return client.user.setActivity(`${prefix}help | Made by xliel#6666`, { type: "PLAYING" });
 }
 
 // Updates the bot's status when he online

@@ -1,1 +1,1 @@
-# Example-Bot-v12
+# Example-Discord-Bot

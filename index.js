@@ -37,7 +37,7 @@ client.on("message", async message => {
 
   let msg = message.content.toLowerCase() || message.content.toUpperCase();
   if (!msg.startsWith(prefix)) return;
-  let args = message.content.slice(bot.prefix.length).trim().split(" ");
+  let args = message.content.slice(prefix.length).trim().split(" ");
   const command = args.shift().toLowerCase();
 
   if (command === "ping") {

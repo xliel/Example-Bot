@@ -1,15 +1,16 @@
-  
 {
-  "name": "discord-bot",
+  "name": "example-bot",
   "version": "1.0.0",
-  "description": "my first bot",
+  "description": "Example a discord bot",
   "main": "index.js",
-  "dependencies": {
-    "discord.js": "^12.0.2"
-  },
   "scripts": {
-    "start": "node ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Xliel",
-  "license": "ISC"
+  "keywords": ['example-discord-bot', 'discord-bot', 'example-bot'],
+  "author": "xliel",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
 }

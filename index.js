@@ -1,34 +1,19 @@
 const { Client, Collection, MessageEmbed } = require("discord.js");
 const { readdirSync } = require("fs");
 const config = require("./config");
+const { prefix, token } = config;
 const client = new Client({
   disableMentions: 'everyone',
   fetchAllMembers: true
 });
 
-client.login(config.token);
-
-const { prefix, token } = config;
-
-// Activity Function
-function Activity() {
-  return client.user.setActivity(`${prefix}help | Made by xliel#6666`, { type: "PLAYING" });
-}
+client.login(token);
 
 // Updates the bot's status when he online
 client.on("ready", async () => {
   console.log(`Bot is Online!`);
-  Activity();
-});
-
-// Updates the bot's status if he joins a server
-client.on("guildCreate", guild => {
-  Activity();
-});
-
-/// Updates the bot's status if he leaves a servers
-client.on("guildDelete", guild => {
-  Activity();
+  // typs: ['PLAYING', 'WATCHING', 'LISTENING', 'STREAMING']
+  client.user.setActivity(`${prefix}help | Made by xliel#6666`, { type: "WATCHING" });
 });
 
 client.on("message", async message => {

@@ -1,5 +1,4 @@
 const { Client, Collection, MessageEmbed } = require("discord.js");
-const { readdirSync } = require("fs");
 const config = require("./config");
 const { prefix, token } = config;
 const client = new Client({
@@ -12,7 +11,7 @@ client.login(token);
 // Updates the bot's status when he online
 client.on("ready", async () => {
     console.log(`Bot is Online!`);
-    // typs: ['PLAYING', 'WATCHING', 'LISTENING', 'STREAMING']
+    // types: ['PLAYING', 'WATCHING', 'LISTENING', 'STREAMING']
     client.user.setActivity(`${prefix}help | Made by xliel#6666`, { type: "WATCHING" });
 });
 
@@ -27,18 +26,14 @@ client.on("message", async message => {
 
     if (command === "ping") {
         message.channel.send("Pong!"); // Normal Message
-    }
-    if (command === "hey") {
+    } else if (command === "hey") {
         message.reply("Hello!"); // Reply Message
-    }
-    if (command === "help") {
+    } else if (command === "help") {
         message.author.send("your help commands"); // DM Message
-    }
-    if (command === "embed") {
+    } else if (command === "embed") {
         let embed = new MessageEmbed()
             .setTitle("Title")
             .setDescription("Description");
-
         message.author.send(embed); // Embed Message
     }
 });
